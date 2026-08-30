@@ -215,6 +215,30 @@
       "time": "20:00",
       "price": 18000,
       "id": "Ox1DGKbmilI"
+    },
+    {
+      "movieId": 1127384,
+      "roomId": 1,
+      "date": "2026-08-30",
+      "time": "14:00",
+      "price": 18000,
+      "id": "ImGrw-Wosas"
+    },
+    {
+      "movieId": 1127384,
+      "roomId": 2,
+      "date": "2026-08-30",
+      "time": "17:00",
+      "price": 18000,
+      "id": "YsG_x6OjPBo"
+    },
+    {
+      "movieId": 1127384,
+      "roomId": 3,
+      "date": "2026-08-30",
+      "time": "20:00",
+      "price": 18000,
+      "id": "hnv6NbLS1zs"
     }
   ],
   "rooms": [
@@ -11848,6 +11872,1158 @@
       "location": "Posterior Derecha",
       "status": "available",
       "id": "SYZPY_-Y9vA"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "yTI1pbFXOjE"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "2NJ-KYlu1mw"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "rN4pwdCf4Bk"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "m9kobd0dfk0"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "E6WS-LhkDVA"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "dALPpP3ZajU"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "Ai5ePgH5JP8"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "9-X1yk62D6o"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "hncR9tZDWxE"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "2NxPDPahccA"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "qBtPDIK7Uao"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "7lmD3euvEhY"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "j5kTPWHGtOE"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "XoYvUBTmiS0"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "oVcdJMBL8z8"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "gN14APfe2Fc"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "jC-QigNj1XM"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "G5PN7PXYQWE"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "mk2NvluIzww"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "dh8wsZSEiiE"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "2InJl7iQ-ls"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "XSGFP1AAHjg"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "gyKwt2KhcdQ"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "dFIa836VEHQ"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "IaeBHjc73pM"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "FSlEDvukIkY"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "6NxS70SVesw"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "kBiFMHfc_yw"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "P7qCEseCQ0s"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "cFOYDCBnQMY"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "RGJmCWSNYBc"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "6njJTANLYxI"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "2cfQib7n4cw"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "y3rLD-wFQgg"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "LxZoGS4fxd0"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "kd3inFbQWh8"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "n3IxZt6lJLc"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "tMTugluwgVM"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "yBYrjGTpExM"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "s5hDPXkL95A"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "6zxClUeRu3Q"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "OOEuTXimtNU"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "G6DI2N4HVe4"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "eN4F2ZBY3lc"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "Yq8pSP2Snf8"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "RgsENFWim-s"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "3G_5ytOfaPs"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "AFUh5mJQlQs"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "rONpWpVeUTU"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "ONcXtvyCjeI"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "t6gUr-bWSpQ"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "Z0b1NHwvWTE"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "hB8XD1iqT1I"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "yLXsyWMAQjA"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "Ve2o0OGqdIc"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "NPfNWw9jhyQ"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "hNZ7BPHAZe0"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "aPbwiJEsJiE"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "FPjwG1MTJIU"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "XNtWJqHiIvE"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "MyGzEYrntTo"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "dwf0M64Vo3k"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "SuW7cNPCyM8"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "oextTvSpkEQ"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "qB95Jk7xK1c"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "VhiqTbxoUd0"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "TSdT5lsePYg"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "EHqfCBpjPmo"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "fgwzJqnH2aI"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "kQA3Qi-Oy8w"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "BsVgYtHaffc"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "mCU0yxgw1D0"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "8zlLiaXeWDc"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "rWrqgUYM0BE"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "6QImL2LLH3k"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "pkAmqP4rbEY"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "zCs4W2cWerQ"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "3hYFEyKjDyI"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "aVJ0TeGHNJU"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "z3Zw4yKP5UA"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "kfhyYiejv6A"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "2Te_9QAi6Eg"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "sEOGedItEcA"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "PvJ_YP1BrBw"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "jMRs7HqojMA"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "YKo2oZCoW34"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "3JnzgA_0n3I"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "9BKFDIFabQI"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "__tyDEfdMgw"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "PBxG4fzUgXE"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "P1ncDrwFhqY"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "SOTzopnJ38c"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "Z6B8MYiDuyk"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "sN0GAhCpTO0"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "M2RjBZyxH-s"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "VEJTJLS8S44"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "xrdofjVbztc"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "LfJsju6DMxA"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "gPed8bmx7ss"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "meN2xHL3KEY"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "tpmK3FEK5cI"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "LbmYVz702g8"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "u2kh6vSIFeI"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "rw6fmx5Sa2w"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "aMutQylSMPs"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "G6Mx0zyoITY"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "5IZdg7QCDvw"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "WTdJOXY_eTc"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "9B275wUvvJs"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "XLLgnQcZUno"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "x3wJVGZozao"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "mG0PsINm-CA"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "1PR9KuVTXY8"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "WqgHu-h8gxg"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "lpb6NndOlHw"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "l71YgQURgEU"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "_AKaCYLG2RY"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "Nvc0dKGn49A"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "Mo5Jdl-gKzI"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "OPROrQ7wcas"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "Nw29i3iJE38"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "1ClyfIeXs74"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "qmPxZsWteX8"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "DO3PUk-EaRQ"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "t7dc_zVmaM0"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "NxhIJz6ctRk"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "nDMIKegk-sQ"
+    },
+    {
+      "functionId": null,
+      "seatId": null,
+      "status": "available",
+      "id": "hqvHqwkdKWo"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-A-1",
+      "seatCode": "A1",
+      "location": "Frontal Izquierda",
+      "status": "available",
+      "id": "C2Xc7JGc2Y0"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-A-2",
+      "seatCode": "A2",
+      "location": "Frontal Izquierda",
+      "status": "available",
+      "id": "QzuzODCS5LY"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-A-3",
+      "seatCode": "A3",
+      "location": "Frontal Centro",
+      "status": "available",
+      "id": "I339Z94_MV4"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-A-4",
+      "seatCode": "A4",
+      "location": "Frontal Centro",
+      "status": "available",
+      "id": "CkFu6Q0K-Lg"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-A-5",
+      "seatCode": "A5",
+      "location": "Frontal Centro",
+      "status": "available",
+      "id": "tK_YBOFlzzE"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-A-6",
+      "seatCode": "A6",
+      "location": "Frontal Derecha",
+      "status": "available",
+      "id": "ARn_ZWMnhU8"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-A-7",
+      "seatCode": "A7",
+      "location": "Frontal Derecha",
+      "status": "available",
+      "id": "wDSG-ucAYok"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-A-8",
+      "seatCode": "A8",
+      "location": "Frontal Derecha",
+      "status": "available",
+      "id": "tA3sqyKeB9k"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-B-1",
+      "seatCode": "B1",
+      "location": "Frontal Izquierda",
+      "status": "available",
+      "id": "IsDWkGzTNrc"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-B-2",
+      "seatCode": "B2",
+      "location": "Frontal Izquierda",
+      "status": "available",
+      "id": "fnE4s4fr3wM"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-B-3",
+      "seatCode": "B3",
+      "location": "Frontal Centro",
+      "status": "available",
+      "id": "-WcZNPA303I"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-B-4",
+      "seatCode": "B4",
+      "location": "Frontal Centro",
+      "status": "available",
+      "id": "mD-a2oE1aoM"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-B-5",
+      "seatCode": "B5",
+      "location": "Frontal Centro",
+      "status": "available",
+      "id": "BOFKVtcCUjQ"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-B-6",
+      "seatCode": "B6",
+      "location": "Frontal Derecha",
+      "status": "available",
+      "id": "QlVjRsUtji4"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-B-7",
+      "seatCode": "B7",
+      "location": "Frontal Derecha",
+      "status": "available",
+      "id": "BS_v6FqIKJ0"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-B-8",
+      "seatCode": "B8",
+      "location": "Frontal Derecha",
+      "status": "available",
+      "id": "fwFItwxN_o4"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-C-1",
+      "seatCode": "C1",
+      "location": "Medio Izquierda",
+      "status": "available",
+      "id": "Y9YqbirlYDE"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-C-2",
+      "seatCode": "C2",
+      "location": "Medio Izquierda",
+      "status": "available",
+      "id": "jW5a5kAaMR8"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-C-3",
+      "seatCode": "C3",
+      "location": "Medio Centro",
+      "status": "available",
+      "id": "_YbLcyf3vuA"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-C-4",
+      "seatCode": "C4",
+      "location": "Medio Centro",
+      "status": "available",
+      "id": "rVEFFox1PSM"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-C-5",
+      "seatCode": "C5",
+      "location": "Medio Centro",
+      "status": "available",
+      "id": "f6DWL8ruYsM"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-C-6",
+      "seatCode": "C6",
+      "location": "Medio Derecha",
+      "status": "available",
+      "id": "DuGlpQx3808"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-C-7",
+      "seatCode": "C7",
+      "location": "Medio Derecha",
+      "status": "available",
+      "id": "g9w4AthS7HM"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-C-8",
+      "seatCode": "C8",
+      "location": "Medio Derecha",
+      "status": "available",
+      "id": "TOepX-vHCGA"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-D-1",
+      "seatCode": "D1",
+      "location": "Medio Izquierda",
+      "status": "available",
+      "id": "Kt2RO-c5cLM"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-D-2",
+      "seatCode": "D2",
+      "location": "Medio Izquierda",
+      "status": "available",
+      "id": "873mAIScwOc"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-D-3",
+      "seatCode": "D3",
+      "location": "Medio Centro",
+      "status": "available",
+      "id": "2E3IBOs74m4"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-D-4",
+      "seatCode": "D4",
+      "location": "Medio Centro",
+      "status": "available",
+      "id": "XImiIdEWKRY"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-D-5",
+      "seatCode": "D5",
+      "location": "Medio Centro",
+      "status": "available",
+      "id": "meeJ7dhjP34"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-D-6",
+      "seatCode": "D6",
+      "location": "Medio Derecha",
+      "status": "available",
+      "id": "xBe5bVdBPwk"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-D-7",
+      "seatCode": "D7",
+      "location": "Medio Derecha",
+      "status": "available",
+      "id": "utti6-agB3s"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-D-8",
+      "seatCode": "D8",
+      "location": "Medio Derecha",
+      "status": "available",
+      "id": "5AmFxEoMrgg"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-E-1",
+      "seatCode": "E1",
+      "location": "Posterior Izquierda",
+      "status": "available",
+      "id": "GX8rJjaEUSU"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-E-2",
+      "seatCode": "E2",
+      "location": "Posterior Izquierda",
+      "status": "available",
+      "id": "SFjR4TPAQJ0"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-E-3",
+      "seatCode": "E3",
+      "location": "Posterior Centro",
+      "status": "available",
+      "id": "yVTeXDO5N6A"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-E-4",
+      "seatCode": "E4",
+      "location": "Posterior Centro",
+      "status": "available",
+      "id": "IdXqxgYr-zE"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-E-5",
+      "seatCode": "E5",
+      "location": "Posterior Centro",
+      "status": "available",
+      "id": "cGmeaO6jy24"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-E-6",
+      "seatCode": "E6",
+      "location": "Posterior Derecha",
+      "status": "available",
+      "id": "I6NR_DQRSzU"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-E-7",
+      "seatCode": "E7",
+      "location": "Posterior Derecha",
+      "status": "available",
+      "id": "7UgDsn3H-Wc"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-E-8",
+      "seatCode": "E8",
+      "location": "Posterior Derecha",
+      "status": "available",
+      "id": "j4pho4h93B8"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-F-1",
+      "seatCode": "F1",
+      "location": "Posterior Izquierda",
+      "status": "available",
+      "id": "S9GWT6Ot9CM"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-F-2",
+      "seatCode": "F2",
+      "location": "Posterior Izquierda",
+      "status": "available",
+      "id": "B4rtxuTzlWs"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-F-3",
+      "seatCode": "F3",
+      "location": "Posterior Centro",
+      "status": "available",
+      "id": "PKKIjluBugo"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-F-4",
+      "seatCode": "F4",
+      "location": "Posterior Centro",
+      "status": "available",
+      "id": "gcYVH5sORA4"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-F-5",
+      "seatCode": "F5",
+      "location": "Posterior Centro",
+      "status": "available",
+      "id": "5h93LdYdb9U"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-F-6",
+      "seatCode": "F6",
+      "location": "Posterior Derecha",
+      "status": "available",
+      "id": "gDk6gePIj1A"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-F-7",
+      "seatCode": "F7",
+      "location": "Posterior Derecha",
+      "status": "available",
+      "id": "S5PutNX_J7E"
+    },
+    {
+      "functionId": "ImGrw-Wosas",
+      "seatId": "1-F-8",
+      "seatCode": "F8",
+      "location": "Posterior Derecha",
+      "status": "available",
+      "id": "I6dvk-pj8Yw"
     }
   ],
   "reservations": [],
