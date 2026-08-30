@@ -122,3 +122,115 @@ export async function obtenerTrailerPelicula(movieId) {
     ) || null
   );
 }
+
+/**
+ * =========================================================
+ * ASIENTOS DISPONIBLES
+ * =========================================================
+ */
+
+export async function contarAsientosDisponibles(functionId) {
+  try {
+    const response = await fetch(
+      `${JSON_SERVER_URL}/functionSeats?functionId=${functionId}`,
+    );
+
+    if (!response.ok) {
+      return null;
+    }
+
+    const data = await response.json();
+
+    if (!data.length) {
+      return null;
+    }
+
+    return data.filter((registro) => registro.status === "available").length;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * =========================================================
+ * VALORACIONES
+ * =========================================================
+ */
+
+export async function obtenerValoracionPelicula(tmdbId, email = "") {
+  try {
+    const parametros = new URLSearchParams({
+      tmdbId: String(tmdbId),
+    });
+
+    if (email) {
+      parametros.set("email", email);
+    }
+
+    const response = await fetch(`${JSON_SERVER_URL}/ratings?${parametros}`);
+
+    if (!response.ok) {
+      return 0;
+    }
+
+    const data = await response.json();
+
+    return data.length ? Number(data[0].score) : 0;
+  } catch {
+    return 0;
+  }
+}
+
+export async function guardarValoracion(valoracion) {
+  const parametros = new URLSearchParams({
+    tmdbId: String(valoracion.tmdbId),
+  });
+
+  if (valoracion.email) {
+    parametros.set("email", valoracion.email);
+  }
+
+  const response = await fetch(`${JSON_SERVER_URL}/ratings?${parametros}`);
+
+  const existentes = response.ok ? await response.json() : [];
+
+  if (existentes.length) {
+    const actualizada = await fetch(
+      `${JSON_SERVER_URL}/ratings/${existentes[0].id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...existentes[0],
+          ...valoracion,
+          updatedAt: new Date().toISOString(),
+        }),
+      },
+    );
+
+    if (!actualizada.ok) {
+      throw new Error("No se pudo actualizar la valoración.");
+    }
+
+    return actualizada.json();
+  }
+
+  const creada = await fetch(`${JSON_SERVER_URL}/ratings`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      ...valoracion,
+      createdAt: new Date().toISOString(),
+    }),
+  });
+
+  if (!creada.ok) {
+    throw new Error("No se pudo guardar la valoración.");
+  }
+
+  return creada.json();
+}
