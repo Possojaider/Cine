@@ -13027,6 +13027,5 @@
     }
   ],
   "reservations": [],
-  "purchases": [],
-  "$schema": "./node_modules/json-server/schema.json"
+  "purchases": []
 }
