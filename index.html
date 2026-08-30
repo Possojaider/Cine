@@ -1,11 +1,210 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cine Aurora, cine independiente desde 1962."
+    />
+    <title>The JP CINEMA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Capa decorativa que simula el grano de una película antigua. -->
+    <div class="film-grain" aria-hidden="true"></div>
+
+    <!-- Encabezado fijo con la identidad y navegación del cine. -->
+    <header class="site-header">
+      <a class="logo" href="#inicio">THE JP</a>
+      <nav aria-label="Navegación principal">
+        <input type="text" id="buscador" placeholder="Buscar película..." aria-label="Buscar película" />
+        <a href="#cartelera">Cartelera</a>
+        <a href="#estrenos">Estrenos</a>
+        <a href="#salas">Salas</a>
+        <a href="#contacto">Ubicación</a>
+      </nav>
+    </header>
+    <main>
+      <!-- Presentación principal y accesos rápidos a las secciones. -->
+      <section class="hero" id="inicio">
+        <div class="marquee-frame">
+          <div class="bulbs" id="bulbs" aria-hidden="true"></div>
+          <p class="eyebrow">Cine independiente · Desde 2005</p>
+          <h1 class="title">The JP <em>CINEMA</em></h1>
+          <p class="subtitle">
+            Donde las historias trascienden la pantalla, las emociones cobran
+            vida y cada visita se convierte en una experiencia inolvidable..
+          </p>
+          <div class="cta-row">
+            <a href="#cartelera" class="btn btn-primary">Ver cartelera</a
+            ><a href="#salas" class="btn btn-ghost">Conocer las salas</a>
+          </div>
+        </div>
+      </section>
+      <!-- Separador visual con perforaciones de cinta cinematográfica. -->
+      <div class="perf" aria-hidden="true"></div>
+
+      <!-- Cartelera: las películas se insertan desde TMDB con JavaScript. -->
+      <section id="cartelera">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-tag">En sala esta semana</p>
+            <h2>Cartelera</h2>
+          </div>
+          <div
+            class="filters"
+            id="filters"
+            role="group"
+            aria-label="Filtrar por género"
+          >
+            <button class="chip active" data-genre="todos">Todos</button
+            ><button class="chip" data-genre="drama">Drama</button
+            ><button class="chip" data-genre="thriller">Thriller</button
+            ><button class="chip" data-genre="animacion">Animación</button
+            ><button class="chip" data-genre="documental">Documental</button>
+          </div>
+        </div>
+        <div class="grid reveal" id="grid"></div>
+      </section>
+      <!-- Separador entre la cartelera y los próximos estrenos. -->
+      <div class="perf" aria-hidden="true"></div>
+
+      <!-- Próximos estrenos y cuenta regresiva para la siguiente función. -->
+      <section id="estrenos">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-tag">Muy pronto</p>
+            <h2>Próximos estrenos</h2>
+          </div>
+        </div>
+        <div class="filmstrip-wrap reveal">
+          <div class="filmstrip" id="filmstrip"></div>
+        </div>
+        <div
+          class="countdown-box reveal"
+          id="countdown"
+          aria-live="polite"
+        ></div>
+      </section>
+      <!-- Separador entre estrenos y la información de las salas. -->
+      <div class="perf" aria-hidden="true"></div>
+
+      <!-- Información descriptiva de los espacios del cine. -->
+      <section id="salas">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-tag">La experiencia</p>
+            <h2>Nuestras salas</h2>
+          </div>
+        </div>
+        <div class="salas-grid reveal">
+          <article class="sala-card">
+            <div class="num">Sala 01</div>
+            <h3>Clásica</h3>
+            <p>
+              Terciopelo rojo, proyección 35mm restaurada y el sonido de
+              siempre. 90 butacas para ver cine como se veía antes.
+            </p>
+          </article>
+          <article class="sala-card">
+            <div class="num">Sala 02</div>
+            <h3>Dolby Atmos</h3>
+            <p>
+              Sonido envolvente de última generación y pantalla curva de 14
+              metros. La sala para grandes estrenos.
+            </p>
+          </article>
+          <article class="sala-card">
+            <div class="num">Terraza</div>
+            <h3>Al aire libre</h3>
+            <p>
+              Funciones bajo el cielo los viernes de temporada seca. Trae tu
+              manta, nosotros ponemos la película.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="historial" class="history-section reveal">
+        <div class="section-head">
+          <div>
+            <p class="section-tag">Tus operaciones</p>
+            <h2>Historial</h2>
+          </div>
+        </div>
+        <div class="history-grid">
+          <article class="history-card">
+            <h3>Reservas pendientes</h3>
+            <ul id="reservasList" class="history-list"></ul>
+          </article>
+          <article class="history-card">
+            <h3>Compras recientes</h3>
+            <ul id="comprasList" class="history-list"></ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Datos de contacto y horario de atención. -->
+    <footer id="contacto">
+      <div class="foot-grid">
+        <div>
+          <h4>The JP CINEMA</h4>
+          <p>
+            Un cine de barrio que resistió al streaming a punta de buen cine y
+            mejores palomitas. Te esperamos.
+          </p>
+        </div>
+        <div>
+          <h4>Horario</h4>
+          <ul>
+            <li>Lun - Jue: 3pm - 10pm</li>
+            <li>Vie - Dom: 12pm - 12am</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>Calle 45 #12-30</li>
+            <li>jp@cinema.co</li>
+            <li>+57 300 000 0000</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        &copy; 2024 The JP. Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <!-- Ventana reutilizable para mostrar el detalle de una película. -->
+    <div
+      class="modal-overlay"
+      id="modalOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal-box">
+        <button class="modal-close" id="modalClose" aria-label="Cerrar detalle">
+          &times;
+        </button>
+        <h3 id="modalTitle"></h3>
+        <div class="modal-meta" id="modalMeta"></div>
+        <div class="modal-video" id="modalTrailer" aria-live="polite">
+          ▶ Trailer (placeholder)
+        </div>
+        <p id="modalSynopsis"></p>
+        <div class="showtimes" id="modalShowtimes"></div>
+        <div class="movie-rating" id="modalRating"></div>
+        <div class="booking-panel" id="modalBooking"></div>
+      </div>
+    </div>
+    <script type="module" src="js/app.js"></script>
+  </body>
 </html>
