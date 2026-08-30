@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Cine Aurora, cine independiente desde 1962."
+      content="The JP CINEMA, cine independiente desde 2005: cartelera, próximos estrenos y reserva de sillas en línea."
     />
     <title>The JP CINEMA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +22,17 @@
     <!-- Encabezado fijo con la identidad y navegación del cine. -->
     <header class="site-header">
       <a class="logo" href="#inicio">THE JP</a>
-      <nav aria-label="Navegación principal">
+      <button
+        type="button"
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="siteNav"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Navegación principal" id="siteNav">
         <input type="text" id="buscador" placeholder="Buscar película..." aria-label="Buscar película" />
         <a href="#cartelera">Cartelera</a>
         <a href="#estrenos">Estrenos</a>

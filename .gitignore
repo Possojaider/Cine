@@ -1,0 +1,7 @@
+# Secretos locales — nunca se suben al repositorio.
+js/config.local.js
+
+# Dependencias y artefactos comunes.
+node_modules/
+dist/
+.DS_Store

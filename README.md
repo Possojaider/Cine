@@ -80,12 +80,16 @@ The-JP-CINEMA/
 │   └── settings.json
 │
 ├── css/
-│   └── style.css
+│   └── styles.css
 │
 ├── js/
 │   ├── api.js
 │   ├── app.js
-│   └── config.js
+│   ├── config.js               # sin secretos, se sube al repo
+│   ├── config.local.example.js # plantilla del token, se sube al repo
+│   └── config.local.js         # tu token real, NUNCA se sube (.gitignore)
+│
+├── .gitignore
 │
 ├── db.json
 │
@@ -100,16 +104,23 @@ The-JP-CINEMA/
 
 ## ⚙️ Configuración
 
-Para utilizar el proyecto correctamente, debes configurar las credenciales necesarias en el archivo de configuración.
+El token de TMDB **no** va en `js/config.js` (ese archivo se sube al repo). Va en
+`js/config.local.js`, que está en `.gitignore` y nunca se versiona.
 
-Ejemplo:
+1. Copia la plantilla:
 
-```javascript
-const CONFIG = {
-  API_URL: "TU_URL_BASE",
-  API_TOKEN: "TU_TOKEN",
-};
-```
+   ```bash
+   cp js/config.local.example.js js/config.local.js
+   ```
+
+2. Abre `js/config.local.js` y reemplaza el valor de `TOKEN_LECTURA_TMDB` por tu
+   token de lectura de TMDB (lo obtienes en
+   https://www.themoviedb.org/settings/api).
+
+> ⚠️ Si vienes de una versión anterior de este proyecto donde el token estaba
+> escrito directamente en `js/config.js`, ese token quedó expuesto en el
+> historial de git. Rótalo cuanto antes desde el panel de TMDB y usa el nuevo
+> token únicamente en `js/config.local.js`.
 
 ## 🚀 Instalación
 

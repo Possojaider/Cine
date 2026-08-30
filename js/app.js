@@ -91,8 +91,18 @@ async function cargarProximosEstrenos() {
           })
           .join("")
       : `<p class="empty-state">No hay próximos estrenos disponibles.</p>`;
+
+    // Se devuelve la fecha de estreno más próxima (aún futura) para que la
+    // cuenta regresiva apunte a un evento real en vez de un valor fijo.
+    const ahora = new Date();
+    const fechasFuturas = estrenos
+      .map((estreno) => new Date(`${estreno.release_date}T20:00:00`))
+      .filter((fecha) => !Number.isNaN(fecha.getTime()) && fecha > ahora)
+      .sort((a, b) => a - b);
+    return fechasFuturas[0] || null;
   } catch (error) {
     contenedor.innerHTML = `<p class="empty-state">No se pudieron cargar los próximos estrenos.</p>`;
+    return null;
   }
 }
 
@@ -707,6 +717,20 @@ function renderSala() {
     email: "",
     telefono: "",
   };
+
+  // El máximo de entradas debe respetar los asientos realmente disponibles
+  // en esta función, no la capacidad total de la sala (que puede estar
+  // parcial o totalmente vendida).
+  const maximoEntradas = Math.max(
+    1,
+    Math.min(
+      Number(funcionSeleccionada.availableSeats ?? room.capacity),
+      Number(room.capacity),
+    ),
+  );
+  if (cantidadEntradas > maximoEntradas) {
+    cantidadEntradas = maximoEntradas;
+  }
   const feedback = mensajeOperacion
     ? `<div class="booking-message booking-feedback ${mensajeOperacion.tipo}">${escaparHtml(mensajeOperacion.mensaje)}</div>`
     : '<div class="booking-feedback" aria-live="polite"></div>';
@@ -733,7 +757,7 @@ function renderSala() {
       </div>
       <div class="info-item">
         <label class="info-label" for="ticketQuantity">Entradas:</label>
-        <input id="ticketQuantity" class="ticket-quantity" type="number" min="1" max="${room.capacity}" value="${cantidadEntradas}" aria-describedby="ticketQuantityHelp" />
+        <input id="ticketQuantity" class="ticket-quantity" type="number" min="1" max="${maximoEntradas}" value="${cantidadEntradas}" aria-describedby="ticketQuantityHelp" />
         <span id="ticketQuantityHelp" class="sr-only">Selecciona la misma cantidad de entradas y sillas.</span>
       </div>
       <div class="info-item">
@@ -750,6 +774,7 @@ function renderSala() {
         <input name="telefono" type="tel" value="${escaparHtml(usuarioActual.telefono || "")}" placeholder="Teléfono" aria-label="Teléfono" autocomplete="tel" class="user-input" />
       </div>
       <button type="button" class="btn btn-sm btn-secondary" data-action="save-user">Guardar</button>
+      <button type="button" class="btn btn-sm btn-ghost" data-action="clear-user">Limpiar datos</button>
     </div>
     <div class="booking-actions">
       <button type="button" class="btn btn-ghost" data-action="clear">Limpiar</button>
@@ -770,7 +795,7 @@ function renderSala() {
     ?.addEventListener("change", (evento) => {
       const cantidad = Number(evento.target.value);
       cantidadEntradas = Number.isInteger(cantidad)
-        ? Math.min(Math.max(cantidad, 1), Number(room.capacity))
+        ? Math.min(Math.max(cantidad, 1), maximoEntradas)
         : 1;
       renderSala();
     });
@@ -781,6 +806,15 @@ function renderSala() {
       if (action === "clear") {
         asientosSeleccionados.clear();
         renderSala();
+        return;
+      }
+      if (action === "clear-user") {
+        const form = modalBooking.querySelector(".user-register");
+        form
+          .querySelectorAll(".user-input")
+          .forEach((input) => (input.value = ""));
+        form.querySelector('[name="nombre"]').focus();
+        setStatusMessage("Formulario de datos del cliente limpiado.", "info");
         return;
       }
       if (["save-user", "reserve", "purchase"].includes(action)) {
@@ -1043,10 +1077,58 @@ document.querySelectorAll(".chip").forEach((filtro) =>
 
 function cerrarModal() {
   capaModal.classList.remove("open");
+  // Vaciar el contenedor del trailer descarga el <iframe> de YouTube, que es
+  // la única forma confiable de detener el audio/video: ocultar el modal con
+  // CSS no basta, el iframe sigue reproduciendo aunque no se vea.
+  modalTrailer.innerHTML = "▶ Trailer (placeholder)";
   elementoFocoAntesModal?.focus?.();
 }
 
 document.querySelector("#modalClose").addEventListener("click", cerrarModal);
+
+// Menú móvil: el botón hamburguesa muestra/oculta el panel de navegación
+// (que en pantallas grandes ya es visible por CSS, sin necesidad de JS).
+const navToggle = document.querySelector("#navToggle");
+const siteNav = document.querySelector("#siteNav");
+
+function cerrarMenuMovil() {
+  siteNav.classList.remove("open");
+  navToggle.setAttribute("aria-expanded", "false");
+}
+
+function alternarMenuMovil() {
+  const abierto = siteNav.classList.toggle("open");
+  navToggle.setAttribute("aria-expanded", String(abierto));
+}
+
+navToggle.addEventListener("click", alternarMenuMovil);
+
+siteNav.querySelectorAll("a").forEach((enlace) => {
+  enlace.addEventListener("click", cerrarMenuMovil);
+});
+
+document.addEventListener("click", (evento) => {
+  if (
+    siteNav.classList.contains("open") &&
+    !siteNav.contains(evento.target) &&
+    !navToggle.contains(evento.target)
+  ) {
+    cerrarMenuMovil();
+  }
+});
+
+document.addEventListener("keydown", (evento) => {
+  if (evento.key === "Escape" && siteNav.classList.contains("open")) {
+    cerrarMenuMovil();
+    navToggle.focus();
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 720) {
+    cerrarMenuMovil();
+  }
+});
 
 capaModal.addEventListener("click", (evento) => {
   if (evento.target === capaModal) {
@@ -1079,11 +1161,17 @@ document.addEventListener("keydown", (evento) => {
   }
 });
 
-cargarProximosEstrenos();
-
-const fechaObjetivo = new Date();
+// Valor de respaldo mientras se confirma (o si falla) la fecha real del
+// próximo estreno.
+let fechaObjetivo = new Date();
 fechaObjetivo.setDate(fechaObjetivo.getDate() + 18);
 fechaObjetivo.setHours(20, 0, 0, 0);
+
+cargarProximosEstrenos().then((fechaReal) => {
+  if (fechaReal) {
+    fechaObjetivo = fechaReal;
+  }
+});
 
 function actualizarCuentaRegresiva() {
   const tiempoRestante = Math.max(0, fechaObjetivo - new Date());
@@ -1145,20 +1233,27 @@ document
   .querySelectorAll(".reveal")
   .forEach((elemento) => observador.observe(elemento));
 
+// Se espera a que el usuario deje de escribir (350ms) antes de consultar
+// TMDB, para no disparar una petición por cada tecla presionada.
+let temporizadorBusqueda = null;
 document.querySelector("#buscador").addEventListener("input", (evento) => {
   const query = evento.target.value.trim();
-  if (query.length > 0) {
-    buscarCarteleraProgramada(query)
-      .then((datos) => {
-        peliculas = datos.results.map(convertirPelicula);
-        mostrarPeliculas(peliculas);
-      })
-      .catch((error) => {
-        rejilla.innerHTML = `<p class="empty-state">${error.message}. Revisa la configuración de TMDB.</p>`;
-      });
-  } else {
-    cargarPeliculas();
-  }
+
+  clearTimeout(temporizadorBusqueda);
+  temporizadorBusqueda = setTimeout(() => {
+    if (query.length > 0) {
+      buscarCarteleraProgramada(query)
+        .then((datos) => {
+          peliculas = datos.results.map(convertirPelicula);
+          mostrarPeliculas(peliculas);
+        })
+        .catch((error) => {
+          rejilla.innerHTML = `<p class="empty-state">${error.message}. Revisa la configuración de TMDB.</p>`;
+        });
+    } else {
+      cargarPeliculas();
+    }
+  }, 350);
 });
 
 renderHistorial();
