@@ -94,3 +94,31 @@ export async function buscarCarteleraProgramada(query) {
     results: peliculasFiltradas,
   };
 }
+
+/**
+ * =========================================================
+ * DETALLES DE PELÍCULA
+ * =========================================================
+ */
+
+export async function obtenerDetallesPelicula(movieId) {
+  return await solicitarDatos(`/movie/${movieId}`, {
+    append_to_response: "credits",
+  });
+}
+
+/**
+ * =========================================================
+ * TRÁILER
+ * =========================================================
+ */
+
+export async function obtenerTrailerPelicula(movieId) {
+  const datos = await solicitarDatos(`/movie/${movieId}/videos`);
+
+  return (
+    datos.results?.find(
+      (video) => video.type === "Trailer" && video.site === "YouTube",
+    ) || null
+  );
+}
