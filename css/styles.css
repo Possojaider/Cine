@@ -1,0 +1,1091 @@
+:root {
+  /* Variables globales de color para mantener una identidad visual consistente. */
+  --void: #120a0d;
+  --velvet: #1e0f14;
+  --velvet-2: #2a141b;
+  --cream: #f3e6d0;
+  --cream-dim: #c9b8a3;
+  --marquee: #f5a623;
+  --marquee-dim: #8a5d1a;
+  --rose: #c73659;
+  --line: rgba(245, 230, 208, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos base y textura decorativa de la página. */
+body {
+  background: var(--void);
+  color: var(--cream);
+  font-family: Fraunces, serif;
+  overflow-x: hidden;
+}
+::selection {
+  background: var(--marquee);
+  color: var(--void);
+}
+:focus-visible {
+  outline: 3px solid var(--marquee);
+  outline-offset: 3px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.film-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.045;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 6vw;
+  background: linear-gradient(to bottom, rgba(18, 10, 13, 0.9), transparent);
+}
+
+/* Identidad del cine y enlaces de navegación. */
+.logo {
+  color: var(--marquee);
+  font:
+    22px "Bebas Neue",
+    sans-serif;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+nav a {
+  color: var(--cream-dim);
+  font:
+    12px "Space Mono",
+    monospace;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav a:hover {
+  color: var(--marquee);
+}
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 6vw 80px;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(245, 166, 35, 0.1),
+      transparent 60%
+    ),
+    linear-gradient(180deg, var(--void), var(--velvet));
+}
+
+/* Marco luminoso de la portada principal. */
+.marquee-frame {
+  position: relative;
+  max-width: 820px;
+  padding: 56px 48px;
+  border: 3px solid var(--marquee);
+  border-radius: 6px;
+}
+.marquee-frame:before,
+.marquee-frame:after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  bottom: -9px;
+  left: 14px;
+  right: 14px;
+  border-top: 2px dashed var(--marquee-dim);
+  border-bottom: 2px dashed var(--marquee-dim);
+  pointer-events: none;
+}
+.bulbs {
+  position: absolute;
+  inset: -14px;
+  pointer-events: none;
+}
+.bulb {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--marquee);
+  box-shadow: 0 0 8px 2px rgba(245, 166, 35, 0.7);
+  animation: flicker 2.4s infinite ease-in-out;
+}
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+.eyebrow,
+.section-tag {
+  color: var(--rose);
+  font:
+    12px "Space Mono",
+    monospace;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.eyebrow {
+  margin-bottom: 18px;
+}
+.title {
+  font:
+    clamp(56px, 11vw, 128px)/0.9 "Bebas Neue",
+    sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 0 0 30px rgba(245, 166, 35, 0.25);
+}
+.title em {
+  color: var(--marquee);
+  font-style: normal;
+}
+.subtitle {
+  color: var(--cream-dim);
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 22px;
+}
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 40px;
+}
+.btn {
+  padding: 14px 30px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font:
+    13px "Space Mono",
+    monospace;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.btn-primary {
+  color: var(--void);
+  background: var(--marquee);
+  font-weight: 700;
+}
+.btn-primary:hover {
+  box-shadow: 0 8px 22px rgba(245, 166, 35, 0.35);
+  transform: translateY(-2px);
+}
+.btn-ghost {
+  color: var(--cream);
+  border-color: var(--line);
+}
+.btn-ghost:hover {
+  color: var(--marquee);
+  border-color: var(--marquee);
+}
+
+/* Separadores con perforaciones y animaciones de aparición. */
+.perf {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 14px 0;
+  background: var(--velvet-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.perf span {
+  width: 10px;
+  height: 14px;
+  border-radius: 2px;
+  background: var(--void);
+}
+section {
+  padding: 110px 6vw;
+}
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.section-head h2 {
+  font:
+    clamp(34px, 5vw, 56px) "Bebas Neue",
+    sans-serif;
+  letter-spacing: 1px;
+}
+.section-tag {
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s,
+    transform 0.7s;
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Filtros y tarjetas de la cartelera. */
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.chip {
+  padding: 8px 16px;
+  color: var(--cream-dim);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  cursor: pointer;
+  font:
+    12px "Space Mono",
+    monospace;
+}
+.chip.active,
+.chip:hover {
+  color: var(--marquee);
+  border-color: var(--marquee);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+}
+.ticket {
+  position: relative;
+  overflow: hidden;
+  background: var(--velvet);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    transform 0.3s,
+    border-color 0.3s;
+}
+.ticket:hover {
+  transform: translateY(-6px);
+  border-color: var(--marquee-dim);
+}
+.poster {
+  height: auto;
+  aspect-ratio: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+  color: rgba(243, 230, 208, 0.75);
+  font:
+    22px "Bebas Neue",
+    sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+  background-color: var(--velvet-2);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 0;
+}
+.poster:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, var(--velvet) 100%);
+}
+.poster-0 {
+  background-color: #6d3c31;
+}
+.poster-1 {
+  background-color: #252d3b;
+}
+.poster-2 {
+  background-color: #5b786b;
+}
+.poster-3 {
+  background-color: #443746;
+}
+.poster-4 {
+  background-color: #806042;
+}
+.poster-5 {
+  background-color: #334a58;
+}
+.stub-line {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.stub-line i {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--void);
+}
+.stub-line span {
+  flex: 1;
+  margin: 0 6px;
+  border-top: 2px dashed var(--line);
+}
+.ticket-body {
+  padding: 18px 20px 22px;
+}
+.ticket-body h3 {
+  margin-bottom: 6px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.meta {
+  margin-bottom: 10px;
+  color: var(--marquee);
+  font:
+    11px "Space Mono",
+    monospace;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.synopsis {
+  color: var(--cream-dim);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.showtimes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.showtimes span {
+  padding: 4px 9px;
+  color: var(--cream-dim);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  font:
+    11px "Space Mono",
+    monospace;
+}
+
+/* Tira horizontal de próximos estrenos y cuenta regresiva. */
+.filmstrip-wrap {
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+.filmstrip {
+  display: flex;
+  width: max-content;
+}
+.frame {
+  width: 200px;
+  flex: none;
+  padding: 0 6px;
+  position: relative;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+.frame-perf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+.frame-perf span {
+  width: 8px;
+  height: 8px;
+  background: var(--void);
+  border-radius: 1px;
+}
+.frame-inner {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  background: var(--velvet);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.frame-inner:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, var(--velvet) 100%);
+  pointer-events: none;
+}
+.frame-inner h4,
+.frame-inner .date {
+  position: relative;
+  z-index: 1;
+}
+.date {
+  margin-top: 4px;
+  color: var(--marquee);
+  font:
+    11px "Space Mono",
+    monospace;
+}
+.countdown-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 26px;
+}
+.cd-unit {
+  text-align: center;
+  min-width: 70px;
+}
+.cd-num {
+  color: var(--marquee);
+  font:
+    40px "Bebas Neue",
+    sans-serif;
+  line-height: 1;
+}
+.cd-label {
+  color: var(--cream-dim);
+  font:
+    10px "Space Mono",
+    monospace;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Información de las salas y pie de página. */
+.salas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+.sala-card {
+  padding: 30px 26px;
+  background: linear-gradient(160deg, var(--velvet), transparent);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.num {
+  color: var(--rose);
+  font:
+    12px "Space Mono",
+    monospace;
+}
+.sala-card h3 {
+  margin: 10px 0 8px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.sala-card p,
+footer p,
+footer li {
+  color: var(--cream-dim);
+  font-size: 14px;
+  line-height: 1.6;
+}
+footer {
+  padding: 70px 6vw 40px;
+  background: var(--velvet);
+  border-top: 1px solid var(--line);
+}
+.foot-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+footer h4 {
+  margin-bottom: 14px;
+  color: var(--marquee);
+  font:
+    12px "Space Mono",
+    monospace;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+footer li {
+  list-style: none;
+  line-height: 1.9;
+}
+.foot-bottom {
+  margin-top: 50px;
+  color: var(--cream-dim);
+  font:
+    11px "Space Mono",
+    monospace;
+  text-align: center;
+  opacity: 0.6;
+}
+
+/* Modal con el detalle de la película seleccionada. */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(10, 5, 7, 0.88);
+}
+.modal-overlay.open {
+  display: flex;
+}
+.modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  padding: 32px;
+  background: var(--velvet);
+  border: 1px solid var(--marquee-dim);
+  border-radius: 10px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  color: var(--cream-dim);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 22px;
+  transition: color 0.2s ease;
+}
+.modal-close:hover {
+  color: var(--marquee);
+}
+.modal-box h3 {
+  margin-bottom: 16px;
+  font:
+    32px "Bebas Neue",
+    sans-serif;
+  letter-spacing: 1px;
+  color: var(--cream);
+}
+.modal-meta {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.movie-detail-grid {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.movie-poster-wrap {
+  width: 160px;
+  height: 230px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.movie-detail-info {
+  display: grid;
+  gap: 10px;
+  color: var(--cream-dim);
+  line-height: 1.5;
+  font-size: 13px;
+}
+.movie-detail-info div:first-child {
+  color: var(--marquee);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.modal-video {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  color: var(--cream-dim);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font:
+    12px "Space Mono",
+    monospace;
+  overflow: hidden;
+  background: rgba(10, 5, 7, 0.5);
+}
+.modal-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.modal-box p {
+  margin-bottom: 28px;
+  color: var(--cream-dim);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.modal-box p + .showtimes {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  margin-bottom: 24px;
+}
+.showtimes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.time-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--cream-dim);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.time-chip .time-text {
+  font: 12px "Space Mono", monospace;
+  font-weight: 600;
+}
+.time-chip .seat-count {
+  font: 10px "Space Mono", monospace;
+  opacity: 0.7;
+}
+.time-chip:hover {
+  border-color: var(--marquee);
+  color: var(--marquee);
+  background: rgba(245, 166, 35, 0.08);
+}
+.time-chip.active {
+  color: var(--marquee);
+  border-color: var(--marquee);
+  background: rgba(245, 166, 35, 0.12);
+}
+.movie-rating {
+  margin: 0 0 24px;
+  padding: 16px 18px;
+  background: rgba(245, 166, 35, 0.05);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.rating-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: var(--cream-dim);
+  font:
+    11px "Space Mono",
+    monospace;
+  text-transform: uppercase;
+}
+.rating-stars {
+  display: inline-flex;
+  gap: 8px;
+}
+.rating-star {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: rgba(243, 230, 208, 0.65);
+  cursor: pointer;
+  font-size: 18px;
+}
+.rating-star.active {
+  color: var(--marquee);
+  border-color: var(--marquee);
+  background: rgba(245, 166, 35, 0.08);
+}
+.history-section {
+  padding-top: 30px;
+}
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.history-card {
+  background: rgba(30, 15, 20, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px 20px;
+}
+.history-card h3 {
+  margin-bottom: 16px;
+  color: var(--marquee);
+  font:
+    18px "Bebas Neue",
+    sans-serif;
+  letter-spacing: 1px;
+}
+.history-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.history-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(245, 166, 35, 0.02);
+  color: var(--cream-dim);
+  font:
+    12px "Space Mono",
+    monospace;
+}
+.history-list strong {
+  color: var(--cream);
+  font-size: 13px;
+}
+.history-list em {
+  color: var(--marquee);
+  font-style: normal;
+}
+.booking-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: rgba(245, 166, 35, 0.06);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.info-item-wide {
+  grid-column: 1 / -1;
+}
+.info-item-wide .info-value {
+  line-height: 1.6;
+}
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.info-label {
+  font: 10px "Space Mono", monospace;
+  color: var(--marquee);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.info-value {
+  font: 14px "Space Mono", monospace;
+  color: var(--cream);
+  font-weight: 600;
+}
+.info-value.highlight {
+  color: var(--marquee);
+  font-size: 16px;
+}
+.ticket-quantity {
+  width: 72px;
+  padding: 7px 8px;
+  color: var(--cream);
+  background: rgba(18, 10, 13, 0.8);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  font: 14px "Space Mono", monospace;
+}
+.user-register {
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(18, 10, 13, 0.6);
+}
+.register-label {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--marquee);
+  font: 11px "Space Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.user-input {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(18, 10, 13, 0.8);
+  color: var(--cream);
+  font: 12px "Space Mono",
+    monospace;
+}
+.confirm-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 8px 0;
+}
+.confirm-header h4 {
+  font:
+    26px "Bebas Neue",
+    sans-serif;
+  letter-spacing: 1px;
+  color: var(--marquee);
+}
+.confirm-body {
+  display: grid;
+  gap: 8px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(18, 10, 13, 0.5);
+  color: var(--cream);
+  font:
+    13px "Space Mono",
+    monospace;
+}
+.confirm-user {
+  margin-top: 8px;
+  display: grid;
+  gap: 6px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.confirm-seats {
+  margin: 6px 0 0 18px;
+  display: grid;
+  gap: 4px;
+  color: var(--cream-dim);
+}
+.booking-panel {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.booking-header h4 {
+  font-size: 20px;
+  margin-top: 6px;
+}
+.seat-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  color: var(--cream-dim);
+  font:
+    10px "Space Mono",
+    monospace;
+}
+.seat-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.seat-indicator {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 4px;
+}
+.seat-indicator.available {
+  background: #2ecc71;
+}
+.seat-indicator.selected {
+  background: #f4c542;
+}
+.seat-indicator.reserved {
+  background: #f39c12;
+}
+.seat-indicator.occupied {
+  background: #d9534f;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.screen {
+  margin: 0 auto 18px;
+  width: min(100%, 440px);
+  padding: 10px 16px;
+  text-align: center;
+  color: var(--marquee);
+  border: 1px solid rgba(245, 166, 35, 0.4);
+  border-radius: 8px 8px 18px 18px;
+  font:
+    11px "Space Mono",
+    monospace;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: rgba(245, 166, 35, 0.08);
+}
+.seat-map {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+.seat-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: max-content;
+}
+.row-label {
+  min-width: 74px;
+  color: var(--cream-dim);
+  font:
+    11px "Space Mono",
+    monospace;
+  text-align: right;
+}
+.seat-btn {
+  width: 34px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: #2ecc71;
+  color: #0a1b12;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  font:
+    10px "Space Mono",
+    monospace;
+}
+.seat-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+.seat-btn.selected {
+  background: #f4c542;
+  color: #1d1c18;
+}
+.seat-btn.reserved {
+  background: #f39c12;
+  color: #fff;
+  cursor: not-allowed;
+}
+.seat-btn.occupied {
+  background: #d9534f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: not-allowed;
+}
+.booking-summary {
+  margin-bottom: 18px;
+  color: var(--cream-dim);
+  font-size: 13px;
+}
+.booking-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.booking-message {
+  padding: 12px 14px;
+  border-radius: 8px;
+  font:
+    12px "Space Mono",
+    monospace;
+}
+.booking-message.success {
+  background: rgba(55, 120, 90, 0.2);
+  color: #9fe3ba;
+  border: 1px solid rgba(159, 227, 186, 0.4);
+}
+.booking-message.error {
+  background: rgba(166, 61, 61, 0.2);
+  color: #f7b1b1;
+  border: 1px solid rgba(247, 177, 177, 0.4);
+}
+@media (max-width: 720px) {
+  nav {
+    display: none;
+  }
+  .marquee-frame {
+    padding: 44px 22px;
+  }
+  .section-head {
+    align-items: flex-start;
+  }
+  .foot-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  section {
+    padding: 80px 6vw;
+  }
+  .booking-header {
+    flex-direction: column;
+  }
+  .user-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-box {
+    padding: 28px 20px;
+  }
+}
