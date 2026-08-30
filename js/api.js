@@ -46,3 +46,51 @@ export async function obtenerCartelera() {
     page: "1",
   });
 }
+
+/**
+ * =========================================================
+ * BUSCAR PELÍCULAS
+ * =========================================================
+ *
+ * El buscador consulta directamente TMDB.
+ */
+
+export async function buscarPeliculas(query) {
+  if (!query || !query.trim()) {
+    return {
+      results: [],
+    };
+  }
+
+  return await solicitarDatos("/search/movie", {
+    query: query.trim(),
+    include_adult: "false",
+    page: "1",
+  });
+}
+
+/**
+ * Busca dentro de la cartelera actual de TMDB.
+ */
+
+export async function buscarCarteleraProgramada(query) {
+  if (!query || !query.trim()) {
+    return {
+      results: [],
+    };
+  }
+
+  const cartelera = await obtenerCartelera();
+
+  const termino = query.trim().toLocaleLowerCase("es");
+
+  const peliculasFiltradas = (cartelera.results || []).filter((pelicula) =>
+    [pelicula.title, pelicula.original_title]
+      .filter(Boolean)
+      .some((titulo) => titulo.toLocaleLowerCase("es").includes(termino)),
+  );
+
+  return {
+    results: peliculasFiltradas,
+  };
+}
