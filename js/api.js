@@ -430,3 +430,63 @@ export async function obtenerSala(roomId) {
  * ASIENTOS
  * =========================================================
  */
+
+export async function obtenerAsientosSala(roomId) {
+  const response = await fetch(`${JSON_SERVER_URL}/seats?roomId=${roomId}`);
+
+  if (!response.ok) {
+    throw new Error("No se pudo consultar la disponibilidad de asientos.");
+  }
+
+  return response.json();
+}
+
+export async function obtenerDisponibilidadPorFuncion(functionId) {
+  const response = await fetch(
+    `${JSON_SERVER_URL}/functionSeats?functionId=${functionId}`,
+  );
+
+  if (!response.ok) {
+    throw new Error("No se pudo consultar la disponibilidad por función.");
+  }
+
+  return response.json();
+}
+
+export async function crearDisponibilidadPorFuncion(datos) {
+  const response = await fetch(`${JSON_SERVER_URL}/functionSeats`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(datos),
+  });
+
+  if (!response.ok) {
+    throw new Error("No se pudo inicializar la disponibilidad del asiento.");
+  }
+
+  return response.json();
+}
+
+export async function actualizarDisponibilidadPorFuncion(
+  functionSeatId,
+  datos,
+) {
+  const response = await fetch(
+    `${JSON_SERVER_URL}/functionSeats/${functionSeatId}`,
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(datos),
+    },
+  );
+
+  if (!response.ok) {
+    throw new Error("No se pudo actualizar la disponibilidad del asiento.");
+  }
+
+  return response.json();
+}
