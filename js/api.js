@@ -490,3 +490,67 @@ export async function actualizarDisponibilidadPorFuncion(
 
   return response.json();
 }
+
+/**
+ * =========================================================
+ * RESERVAS
+ * =========================================================
+ */
+
+export async function guardarReserva(reserva) {
+  const response = await fetch(`${JSON_SERVER_URL}/reservations`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(reserva),
+  });
+
+  if (!response.ok) {
+    throw new Error("No se pudo registrar la reserva.");
+  }
+
+  return response.json();
+}
+
+/**
+ * =========================================================
+ * COMPRAS
+ * =========================================================
+ */
+
+export async function guardarCompra(compra) {
+  const response = await fetch(`${JSON_SERVER_URL}/purchases`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(compra),
+  });
+
+  if (!response.ok) {
+    throw new Error("No se pudo registrar la compra.");
+  }
+
+  return response.json();
+}
+
+/**
+ * =========================================================
+ * ELIMINAR REGISTROS
+ * =========================================================
+ */
+
+async function eliminarRegistro(coleccion, id) {
+  const response = await fetch(`${JSON_SERVER_URL}/${coleccion}/${id}`, {
+    method: "DELETE",
+  });
+
+  if (!response.ok) {
+    throw new Error(`No se pudo revertir el registro en ${coleccion}.`);
+  }
+}
+
+export const eliminarReserva = (id) => eliminarRegistro("reservations", id);
+
+export const eliminarCompra = (id) => eliminarRegistro("purchases", id);
