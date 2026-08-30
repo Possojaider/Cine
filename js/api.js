@@ -554,3 +554,101 @@ async function eliminarRegistro(coleccion, id) {
 export const eliminarReserva = (id) => eliminarRegistro("reservations", id);
 
 export const eliminarCompra = (id) => eliminarRegistro("purchases", id);
+
+/**
+ * =========================================================
+ * ACTUALIZAR REGISTROS
+ * =========================================================
+ */
+
+async function actualizarRegistro(coleccion, id, datos) {
+  const response = await fetch(`${JSON_SERVER_URL}/${coleccion}/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(datos),
+  });
+
+  if (!response.ok) {
+    throw new Error(`No se pudo confirmar el registro en ${coleccion}.`);
+  }
+
+  return response.json();
+}
+
+export const actualizarReserva = (id, datos) =>
+  actualizarRegistro("reservations", id, datos);
+
+export const actualizarCompra = (id, datos) =>
+  actualizarRegistro("purchases", id, datos);
+
+/**
+ * =========================================================
+ * CONSULTAR RESERVAS
+ * =========================================================
+ */
+
+export async function obtenerReservas() {
+  const response = await fetch(`${JSON_SERVER_URL}/reservations`);
+
+  if (!response.ok) {
+    throw new Error("No se pudo consultar las reservas.");
+  }
+
+  return response.json();
+}
+
+/**
+ * =========================================================
+ * CONSULTAR COMPRAS
+ * =========================================================
+ */
+
+export async function obtenerCompras() {
+  const response = await fetch(`${JSON_SERVER_URL}/purchases`);
+
+  if (!response.ok) {
+    throw new Error("No se pudo consultar las compras.");
+  }
+
+  return response.json();
+}
+
+/**
+ * =========================================================
+ * ACTUALIZAR ASIENTO
+ * =========================================================
+ */
+
+export async function actualizarAsiento(seatId, datos) {
+  const response = await fetch(`${JSON_SERVER_URL}/seats/${seatId}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(datos),
+  });
+
+  if (!response.ok) {
+    throw new Error("No se pudo actualizar la disponibilidad del asiento.");
+  }
+
+  return response.json();
+}
+
+/**
+ * =========================================================
+ * PRÓXIMOS ESTRENOS
+ * =========================================================
+ *
+ * Al igual que la cartelera, los próximos estrenos vienen
+ * directamente de TMDB (endpoint /movie/upcoming).
+ */
+
+export async function obtenerProximosEstrenos() {
+  return await solicitarDatos("/movie/upcoming", {
+    region: "CO",
+    page: "1",
+  });
+}
