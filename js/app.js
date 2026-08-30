@@ -1,5 +1,16 @@
 import { URL_IMAGEN_TMDB } from "./config.js";
 
+let peliculas = [];
+let peliculaSeleccionada = null;
+let funcionSeleccionada = null;
+let asientosSala = [];
+let asientosSeleccionados = new Set();
+let operacionEnCurso = false;
+let cantidadEntradas = 1;
+let mensajeOperacion = null;
+const PRECIO_BASE = 18000;
+const HISTORIAL_KEY = "cine-historial";
+
 let funcionesActuales = [];
 
 const identificadoresGeneros = {
