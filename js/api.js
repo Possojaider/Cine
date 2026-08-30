@@ -398,3 +398,35 @@ export async function obtenerFuncionesPelicula(movieId) {
 
   return funcionesCreadas;
 }
+
+/**
+ * =========================================================
+ * SALAS
+ * =========================================================
+ */
+
+export async function obtenerSalas() {
+  const response = await fetch(`${JSON_SERVER_URL}/rooms`);
+
+  if (!response.ok) {
+    throw new Error("No se pudo consultar las salas del cine.");
+  }
+
+  return response.json();
+}
+
+export async function obtenerSala(roomId) {
+  const response = await fetch(`${JSON_SERVER_URL}/rooms/${roomId}`);
+
+  if (!response.ok) {
+    throw new Error("No se pudo consultar la sala seleccionada.");
+  }
+
+  return response.json();
+}
+
+/**
+ * =========================================================
+ * ASIENTOS
+ * =========================================================
+ */
