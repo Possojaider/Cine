@@ -434,7 +434,7 @@
       "number": 3,
       "seatCode": "C3",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "1-C-4",
@@ -443,7 +443,7 @@
       "number": 4,
       "seatCode": "C4",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "1-C-5",
@@ -452,7 +452,7 @@
       "number": 5,
       "seatCode": "C5",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "1-C-6",
@@ -461,7 +461,7 @@
       "number": 6,
       "seatCode": "C6",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "1-C-7",
@@ -470,7 +470,7 @@
       "number": 7,
       "seatCode": "C7",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "1-C-8",
@@ -479,7 +479,7 @@
       "number": 8,
       "seatCode": "C8",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "1-D-1",
@@ -488,7 +488,7 @@
       "number": 1,
       "seatCode": "D1",
       "location": "Media Izquierda",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "1-D-2",
@@ -497,7 +497,7 @@
       "number": 2,
       "seatCode": "D2",
       "location": "Media Izquierda",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "1-D-3",
@@ -506,7 +506,7 @@
       "number": 3,
       "seatCode": "D3",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "1-D-4",
@@ -515,7 +515,7 @@
       "number": 4,
       "seatCode": "D4",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "1-D-5",
@@ -524,7 +524,7 @@
       "number": 5,
       "seatCode": "D5",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "1-D-6",
@@ -533,7 +533,7 @@
       "number": 6,
       "seatCode": "D6",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "1-D-7",
@@ -542,7 +542,7 @@
       "number": 7,
       "seatCode": "D7",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "1-D-8",
@@ -551,7 +551,7 @@
       "number": 8,
       "seatCode": "D8",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "1-E-1",
@@ -857,7 +857,7 @@
       "number": 2,
       "seatCode": "C2",
       "location": "Media Izquierda",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "2-C-3",
@@ -866,7 +866,7 @@
       "number": 3,
       "seatCode": "C3",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "2-C-4",
@@ -875,7 +875,7 @@
       "number": 4,
       "seatCode": "C4",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "2-C-5",
@@ -884,7 +884,7 @@
       "number": 5,
       "seatCode": "C5",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "2-C-6",
@@ -893,7 +893,7 @@
       "number": 6,
       "seatCode": "C6",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "2-C-7",
@@ -902,7 +902,7 @@
       "number": 7,
       "seatCode": "C7",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "2-C-8",
@@ -911,7 +911,7 @@
       "number": 8,
       "seatCode": "C8",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "2-D-1",
@@ -920,7 +920,7 @@
       "number": 1,
       "seatCode": "D1",
       "location": "Media Izquierda",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "2-D-2",
@@ -929,7 +929,7 @@
       "number": 2,
       "seatCode": "D2",
       "location": "Media Izquierda",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "2-D-3",
@@ -938,7 +938,7 @@
       "number": 3,
       "seatCode": "D3",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "2-D-4",
@@ -947,7 +947,7 @@
       "number": 4,
       "seatCode": "D4",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "2-D-5",
@@ -956,7 +956,7 @@
       "number": 5,
       "seatCode": "D5",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "2-D-6",
@@ -965,7 +965,7 @@
       "number": 6,
       "seatCode": "D6",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "2-D-7",
@@ -974,7 +974,7 @@
       "number": 7,
       "seatCode": "D7",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "2-D-8",
@@ -983,7 +983,7 @@
       "number": 8,
       "seatCode": "D8",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "2-E-1",
@@ -1208,7 +1208,7 @@
       "number": 1,
       "seatCode": "C1",
       "location": "Media Izquierda",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "3-C-2",
@@ -1217,7 +1217,7 @@
       "number": 2,
       "seatCode": "C2",
       "location": "Media Izquierda",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "3-C-3",
@@ -1226,7 +1226,7 @@
       "number": 3,
       "seatCode": "C3",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "3-C-4",
@@ -1235,7 +1235,7 @@
       "number": 4,
       "seatCode": "C4",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "3-C-5",
@@ -1244,7 +1244,7 @@
       "number": 5,
       "seatCode": "C5",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "3-C-6",
@@ -1253,7 +1253,7 @@
       "number": 6,
       "seatCode": "C6",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "3-C-7",
@@ -1262,7 +1262,7 @@
       "number": 7,
       "seatCode": "C7",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "3-C-8",
@@ -1271,7 +1271,7 @@
       "number": 8,
       "seatCode": "C8",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "3-D-1",
@@ -1280,7 +1280,7 @@
       "number": 1,
       "seatCode": "D1",
       "location": "Media Izquierda",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "3-D-2",
@@ -1289,7 +1289,7 @@
       "number": 2,
       "seatCode": "D2",
       "location": "Media Izquierda",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "3-D-3",
@@ -1298,7 +1298,7 @@
       "number": 3,
       "seatCode": "D3",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "3-D-4",
@@ -1307,7 +1307,7 @@
       "number": 4,
       "seatCode": "D4",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "3-D-5",
@@ -1316,7 +1316,7 @@
       "number": 5,
       "seatCode": "D5",
       "location": "Media Centro",
-      "type": "standard"
+      "type": "vip"
     },
     {
       "id": "3-D-6",
@@ -1325,7 +1325,7 @@
       "number": 6,
       "seatCode": "D6",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "3-D-7",
@@ -1334,7 +1334,7 @@
       "number": 7,
       "seatCode": "D7",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "3-D-8",
@@ -1343,7 +1343,7 @@
       "number": 8,
       "seatCode": "D8",
       "location": "Media Derecha",
-      "type": "standard"
+      "type": "premium"
     },
     {
       "id": "3-E-1",
