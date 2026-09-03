@@ -36,6 +36,8 @@ const HISTORIAL_KEY = "cine-historial";
 
 let funcionesActuales = [];
 
+
+
 const identificadoresGeneros = {
   drama: [18, 10749, 10752, 36],
   thriller: [53, 80, 9648, 27],
@@ -234,6 +236,7 @@ function limpiarStatusMessage() {
   mensajeOperacion = null;
 }
 
+
 function obtenerUsuarioRegistrado() {
   try {
     return JSON.parse(localStorage.getItem("cine-usuario") || "null");
@@ -241,6 +244,8 @@ function obtenerUsuarioRegistrado() {
     return null;
   }
 }
+
+
 
 function guardarUsuarioRegistrado(usuario) {
   localStorage.setItem("cine-usuario", JSON.stringify(usuario));
@@ -274,6 +279,11 @@ function confirmarOperacion(tipo) {
     .filter(Boolean);
   const total = ids.length * Number(funcionSeleccionada?.price || PRECIO_BASE);
 
+  if (asiento === "premium") {
+    
+  } else {
+    
+  }
   return new Promise((resolve) => {
     modalBooking.innerHTML = `
       <div class="confirm-card">
